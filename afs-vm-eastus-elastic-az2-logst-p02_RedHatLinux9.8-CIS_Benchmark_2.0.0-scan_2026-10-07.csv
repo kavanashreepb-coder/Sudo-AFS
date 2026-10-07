@@ -1,0 +1,238 @@
+ACCOUNT:AFS 
+ACCOUNT-BAMID:BAM0002B6B 
+CIS_Benchmark_Version: 2.0.0 
+Customisation Date: 2026-10-07 
+Scan Version: CIS_Benchmark_2.0.0
+FQDN:afs-vm-eastus-elastic-az2-logst-p02.jphjhwchgmwurgklsgogdo0e3h.bx.internal.cloudapp.net 
+IP-ADDRESS:192.168.0.69/26 
+OS_Name&Version: RedHatLinux9.8 
+Scan-Date: 2026-10-07
+Time-Stamp: 08:19:41
+********************************************************
+SECTION-ID|SECTION-HEADING|SYSTEM-VALUE/PARAMETER|CURRENT-VALUE|TEST-RESULT
+1.1.1.1|Initial Setup / Configure Filesystem Kernel Modules|Ensure cramfs kernel module is not available|Mounting of cramfs filesystems is disabled|Yes
+1.1.1.2|Initial Setup / Configure Filesystem Kernel Modules|Ensure freevxfs kernel module is not available|freevxfs kernel module is not available|Yes
+1.1.1.3|Initial Setup / Configure Filesystem Kernel Modules|Ensure hfs kernel module is not available|hfs kernel module is not available|Yes
+1.1.1.4|Initial Setup / Configure Filesystem Kernel Modules|Ensure hfsplus kernel module is not available|hfsplus kernel module is not available|Yes
+1.1.1.5|Initial Setup / Configure Filesystem Kernel Modules|Ensure jffs2 kernel module is not available|jffs2 kernel module is not available|Yes
+1.1.1.8|Initial Setup / Configure Filesystem Kernel Modules|Ensure usb-storage kernel module is not available|usb-storage kernel module is not available|Yes
+1.1.2.1.1|Initial Setup / Configure Filesystem Partitions|Ensure /tmp is a separate partition|/tmp is a separate partition|Yes
+1.1.2.1.1|Initial Setup / Configure Filesystem Partitions|Ensure /tmp is a separate partition|Systemd will mount /tmp at boot time(status: generated) |Yes
+1.1.2.1.2|Initial Setup / Configure Filesystem Partitions|Ensure nodev option set on /tmp partition|nodev option is not set for /tmp|No
+1.1.2.1.3|Initial Setup / Configure Filesystem Partitions|Ensure nosuid option set on /tmp partition|nosuid option is not set for /tmp|No
+1.1.2.1.4|Initial Setup / Configure Filesystem Partitions|Ensure noexec option set on /tmp partition|noexec option is not set for /tmp|No
+1.1.2.2.1|Initial Setup / Configure Filesystem Partitions|Ensure /dev/shm is a separate partition|/dev/shm is a separate partition|Yes
+1.1.2.2.2|Initial Setup / Configure Filesystem Partitions|Ensure nodev option set on /dev/shm partition|nodev option is set for /dev/shm|Yes
+1.1.2.2.3|Initial Setup / Configure Filesystem Partitions|Ensure nosuid option set on /dev/shm partition|nosuid option is set for /dev/shm|Yes
+1.1.2.2.4|Initial Setup / Configure Filesystem Partitions|Ensure noexec option set on /dev/shm partition|noexec option is set for /dev/shm|Yes
+1.1.2.3.2|Initial Setup / Configure Filesystem Partitions|Ensure nodev option set on /home partition|nodev option is set for /home|Yes
+1.1.2.3.3|Initial Setup / Configure Filesystem Partitions|Ensure nosuid option set on /home partition|nosuid option is set for /home|Yes
+1.1.2.4.2|Initial Setup / Configure Filesystem Partitions|Ensure nodev option set on /var partition|nodev option is set for /var|Yes
+1.1.2.4.3|Initial Setup / Configure Filesystem Partitions|Ensure nosuid option set on /var partition|nosuid option is set for /var|Yes
+1.1.2.5.2|Initial Setup / Configure Filesystem Partitions|Ensure nodev option set on /var/tmp partition|/var/tmp is not a separate partition|No
+1.1.2.5.3|Initial Setup / Configure Filesystem Partitions|Ensure nosuid option set on /var/tmp partition|/var/tmp is not a separate partition|No
+1.1.2.5.4|Initial Setup / Configure Filesystem Partitions|Ensure noexec option set on /var/tmp partition|/var/tmp is not a separate partition|No
+1.1.2.6.2|Initial Setup / Configure Filesystem Partitions|Ensure nodev option set on /var/log partition|/var/log is not a separate mount; cannot validate nodev on /var/log|No
+1.1.2.6.3|Initial Setup / Configure Filesystem Partitions|Ensure nosuid option set on /var/log partition|/var/log is not a separate mount; cannot validate nosuid on /var/log|No
+1.1.2.6.4|Initial Setup / Configure Filesystem Partitions|Ensure noexec option set on /var/log partition|/var/log is not a separate mount; cannot validate noexec on /var/log|No
+1.1.2.7.2|Initial Setup / Configure Filesystem Partitions|Ensure nodev option set on /var/log/audit partition|/var/log/audit is not a separate mount; cannot validate nodev on /var/log/audit|No
+1.1.2.7.3|Initial Setup / Configure Filesystem Partitions|Ensure nosuid option set on /var/log/audit partition|/var/log/audit is not a separate mount; cannot validate nosuid on /var/log/audit|No
+1.1.2.7.4|Initial Setup / Configure Filesystem Partitions|Ensure noexec option set on /var/log/audit partition|/var/log/audit is not a separate mount; cannot validate noexec on /var/log/audit|No
+1.2.1.2|Initial Setup / Package Management|Ensure gpgcheck is globally activated|Global gpgcheck enabled; no repo overrides disabling it|Yes
+1.3.1.1|Initial Setup / Mandatory Access Control|Ensure SELinux is installed|SELinux is installed |Yes
+1.3.1.2|Initial Setup / Mandatory Access Control|Ensure SELinux is not disabled in bootloader configuration|SELinux is not disabled in bootloader configuration|Yes
+1.3.1.3|Initial Setup / Mandatory Access Control|Ensure SELinux policy is configured (targeted or mls)|SELinux configured policy: targeted; loaded policy: targeted|Yes
+1.3.1.4|Initial Setup / Mandatory Access Control|Ensure SELinux mode is not disabled|SELinux runtime mode: enforcing; configured mode: enforcing|Yes
+1.3.1.7|Initial Setup / Mandatory Access Control|Ensure the MCS Translation Service (mcstrans) is not installed|MCS Translation Service is not installed|Yes
+1.3.1.8|Initial Setup / Mandatory Access Control|Ensure SETroubleshoot is not installed|SETroubleshoot is not installed|Yes
+1.4.1|Initial Setup / Configure Bootloader|Ensure bootloader password is set|Bootloader password is not set|No
+1.4.2|Initial Setup / Configure Bootloader|Ensure access to bootloader config is configured|Bootloader config permissions are correctly set|Yes
+1.5.1|Initial Setup / Configure Additional Process Hardening|Ensure address space layout randomization is enabled|Address space layout randomization (ASLR) is enabled. (Runtime: 2; Effective: 2)|Yes
+1.5.2|Initial Setup / Configure Additional Process Hardening|Ensure ptrace_scope is restricted|ptrace_scope is NOT restricted. (Runtime: 0; Effective: 0; expected 1)|No
+1.5.3|Initial Setup / Configure Additional Process Hardening|Ensure core dump backtraces are disabled|Core dump backtraces are disabled. (Effective setting: ProcessSizeMax=0)|Yes
+1.5.4|Initial Setup / Configure Additional Process Hardening|Ensure core dump storage is disabled|Core dump storage is disabled. (Effective setting: Storage=none)|Yes
+1.6.1|Initial Setup / Configure system wide crypto policy|Ensure system wide crypto policy is not set to LEGACY|Crypto policy is not set to LEGACY in /etc/crypto-policies/config|Yes
+1.6.2|Initial Setup / Configure system wide crypto policy|Ensure system wide crypto policy is not set in sshd configuration|CRYPTO_POLICY is not set in /etc/sysconfig/sshd|Yes
+1.6.3|Initial Setup / Configure system wide crypto policy|Ensure system wide crypto policy disables sha1 hash and signature support|Enabled SHA1 found in hash/sign lines|No
+1.6.4|Initial Setup / Configure system wide crypto policy|Ensure system wide crypto policy disables macs less than 128 bits|No weak (<128-bit) MACs detected (audit returned nothing)|Yes
+1.6.5|Initial Setup / Configure system wide crypto policy|Ensure system wide crypto policy disables cbc for ssh|CBC enabled for SSH (cipher@ssh missing -CBC)|No
+1.7.1|Initial Setup / Configure Command Line Warning Banners|Ensure message of the day is configured properly|The message is configured correctly in /etc/motd and contains no system information tokens|Yes
+1.7.2|Initial Setup / Configure Command Line Warning Banners|Ensure local login warning banner is configured properly|The message is configured correctly in /etc/issue and contains no system information tokens|Yes
+1.7.3|Initial Setup / Configure Command Line Warning Banners|Ensure remote login warning banner is configured properly|The message is configured correctly in /etc/issue.net and contains no system information tokens|Yes
+1.7.4|Initial Setup / Configure Command Line Warning Banners|Ensure access to /etc/motd is configured|Permissions on /etc/motd are configured correctly|Yes
+1.7.5|Initial Setup / Configure Command Line Warning Banners|Ensure access to /etc/issue is configured|Permissions on /etc/issue are configured correctly|Yes
+1.7.6|Initial Setup / Configure Command Line Warning Banners|Ensure access to /etc/issue.net is configured|Permissions on /etc/issue.net are configured correctly|Yes
+1.8.2|Initial Setup / Configure GNOME Display Manager|Ensure GDM login banner is configured|GDM login banner is configured|Yes
+1.8.3|Initial Setup / Configure GNOME Display Manager|Ensure GDM disable-user-list option is enabled|GDM disable-user-list option is enabled|Yes
+1.8.4|Initial Setup / Configure GNOME Display Manager|Ensure GDM screen locks when the user is idle|GDM screen locks when the user is idle|Yes
+1.8.5|Initial Setup / Configure GNOME Display Manager|Ensure GDM screen locks cannot be overridden|GDM screen locks cannot be overridden|Yes
+1.8.6|Initial Setup / Configure GNOME Display Manager|Ensure GDM automatic mounting of removable media is disabled|GDM automatic mounting of removable media is disabled|Yes
+1.8.7|Initial Setup / Configure GNOME Display Manager|Ensure GDM disabling automatic mounting of removable media is not overridden|GDM disabling automatic mounting of removable media is not overridden|Yes
+1.8.8|Initial Setup / Configure GNOME Display Manager|Ensure GDM autorun-never is enabled|GDM autorun-never is enabled|Yes
+1.8.9|Initial Setup / Configure GNOME Display Manager|Ensure GDM autorun-never is not overridden|GDM autorun-never is not overridden|Yes
+1.8.10|Initial Setup / Configure GNOME Display Manager|Ensure XDCMP is not enabled|XDCMP is not enabled|Yes
+2.1.1|Services / Configure Server Services|Ensure autofs services are not in use|package autofs is not installed|Yes
+2.1.2|Services / Configure Server Services|Ensure avahi daemon services are not in use|avahi daemon services are not in use (package not installed)|Yes
+2.1.3|Services / Configure Server Services|Ensure dhcp server services are not in use|package dhcp-server is not installed|Yes
+2.1.4|Services / Configure Server Services|Ensure dns server services are not in use|package bind is not installed|Yes
+2.1.5|Services / Configure Server Services|Ensure dnsmasq services are not in use|package dnsmasq is not installed|Yes
+2.1.6|Services / Configure Server Services|Ensure samba file server services are not in use|package samba is not installed|Yes
+2.1.7|Services / Configure Server Services|Ensure ftp server services are not in use|ftp server services are not installed|Yes
+2.1.8|Services / Configure Server Services|Ensure message access server services are not in use|package dovecot is not installed; package cyrus-imapd is not installed|Yes
+2.1.9|Services / Configure Server Services|Ensure network file system services are not in use|network file system services are not in use|Yes
+2.1.10|Services / Configure Server Services|Ensure nis server services are not in use|package ypserv is not installed|Yes
+2.1.11|Services / Configure Server Services|Ensure print server services are not in use|CUPS package is not installed|Yes
+2.1.12|Services / Configure Server Services|Ensure rpcbind services are not in use|rpcbind services are not in use|Yes
+2.1.13|Services / Configure Server Services|Ensure rsync services are not in use|package rsync-daemon is not installed|Yes
+2.1.14|Services / Configure Server Services|Ensure snmp services are not in use|package net-snmp is not installed|Yes
+2.1.15|Services / Configure Server Services|Ensure telnet server services are not in use|package telnet-server is not installed|Yes
+2.1.16|Services / Configure Server Services|Ensure tftp server services are not in use|package tftp-server is not installed|Yes
+2.1.17|Services / Configure Server Services|Ensure web proxy server services are not in use|package squid is not installed|Yes
+2.1.18|Services / Configure Server Services|Ensure web server services are not in use|httpd package is installed but httpd service is not enabled and not active|Yes
+2.1.19|Services / Configure Server Services|Ensure xinetd services are not in use|package xinetd is not installed|Yes
+2.1.21|Services / Configure Server Services|Ensure mail transfer agents are configured for local-only mode|Port "25" is not listening on a non-loopback network interface; Port "465" is not listening on a non-loopback network interface; Port "587" is not listening on a non-loopback network interface; |Yes
+2.2.1|Services / Configure Client Services|Ensure ftp client is not installed|ftp package is not installed|Yes
+2.2.3|Services / Configure Client Services|Ensure nis client is not installed|ypbind package is not installed|Yes
+2.2.4|Services / Configure Client Services|Ensure telnet client is not installed|telnet package is installed|No
+2.2.5|Services / Configure Client Services|Ensure tftp client is not installed|package tftp is not installed|Yes
+2.3.1|Services / Configure Time Synchronization|Ensure time synchronization is in use|Chronyd must be running|Yes
+2.3.2|Services / Configure Time Synchronization|Ensure chrony is configured|At least one pool or server is not specified|No
+2.3.3|Services / Configure Time Synchronization|Ensure chrony is not run as the root user|No evidence of 'OPTIONS=... -u root' in /etc/sysconfig/chronyd|Yes
+2.4.1.1|Services / Job Schedulers|Ensure cron daemon is enabled and active|cron daemon (crond.service) enabled: enabled; active: active|Yes
+2.4.1.2|Services / Job Schedulers|Ensure permissions on /etc/crontab are configured|Permissions on /etc/crontab are configured|Yes
+2.4.1.3|Services / Job Schedulers|Ensure permissions on /etc/cron.hourly are configured|Permissions on /etc/cron.hourly are configured|Yes
+2.4.1.4|Services / Job Schedulers|Ensure permissions on /etc/cron.daily are configured|Permissions on /etc/cron.daily are configured|Yes
+2.4.1.5|Services / Job Schedulers|Ensure permissions on /etc/cron.weekly are configured|Permissions on /etc/cron.weekly are configured|Yes
+2.4.1.6|Services / Job Schedulers|Ensure permissions on /etc/cron.monthly are configured|Permissions on /etc/cron.monthly are configured|Yes
+2.4.1.7|Services / Job Schedulers|Ensure permissions on /etc/cron.d are configured|Permissions on /etc/cron.d are NOT configured correctly|No
+2.4.1.8|Scheduled Jobs|Ensure crontab is restricted to authorized users|/etc/cron.allow is correctly configured and /etc/cron.deny is correctly configured or not present|Yes
+2.4.2.1|Services / Job Schedulers|Ensure at is restricted to authorized users|at.allow/at.deny permissions or ownership NOT compliant|No
+3.1.2|Network / Configure Network Devices|Ensure wireless interfaces are disabled|Wireless interfaces are disabled|Yes
+3.1.3|Network / Configure Network Devices|Ensure bluetooth services are not in use|Bluez installed Bluetooth service enabled inactive|No
+3.3.1|Network / Configure Network Kernel Parameters|Ensure IP forwarding is disabled|IP forwarding is disabled|Yes
+3.3.2|Network / Configure Network Kernel Parameters|Ensure packet redirect sending is disabled|Packet redirect sending is disabled|Yes
+3.3.3|Network / Configure Network Kernel Parameters|Ensure bogus ICMP responses are ignored|Bogus ICMP responses are ignored|Yes
+3.3.4|Network / Configure Network Kernel Parameters|Ensure broadcast ICMP requests are ignored|Broadcast ICMP requests are ignored|Yes
+3.3.5|Network / Configure Network Kernel Parameters|Ensure ICMP redirects are not accepted|ICMP redirects are not accepted correctly|Yes
+3.3.6|Network / Configure Network Kernel Parameters|Ensure secure ICMP redirects are not accepted|Secure ICMP redirects are not accepted correctly|Yes
+3.3.7|Network / Configure Network Kernel Parameters|Ensure reverse path filtering is enabled|Reverse path filtering is enabled correctly|Yes
+3.3.8|Network / Configure Network Kernel Parameters|Ensure source routed packets are not accepted|Source routed packets are not accepted|Yes
+3.3.9|Network / Configure Network Kernel Parameters|Ensure suspicious packets are logged|Suspicious packets are logged|Yes
+3.3.10|Network / Configure Network Kernel Parameters|Ensure TCP SYN Cookies is enabled|TCP SYN cookies is enabled|Yes
+3.3.11|Network / Configure Network Kernel Parameters|Ensure IPv6 router advertisements are not accepted|IPv6 router advertisements are not accepted|Yes
+4.1.1|Host Based Firewall / Configure a firewall utility|Ensure nftables is installed|Nftables is installed|Yes
+4.1.2|Host Based Firewall / Configure a firewall utility|Ensure a single firewall configuration utility is in use|A single firewall configuration utility is not in use|No
+4.2.2|Host Based Firewall / Configure FirewallD|Ensure firewalld loopback traffic is configured|firewalld is not enabled and active (control applies when firewalld is in use)|No
+4.3.1|Host Based Firewall / Configure NFTables|Ensure nftables base chains exist| Base chain for INPUT does not exist. Base chain for FORWARD does not exist.|No
+4.3.3|Host Based Firewall / Configure NFTables|Ensure nftables default deny firewall policy|nftables service is not enabled or base chain for input does not exist|No
+4.3.3|Host Based Firewall / Configure NFTables|Ensure nftables default deny firewall policy|nftables service is not enabled or base chain for forward does not exist|No
+4.3.4|Host Based Firewall / Configure NFTables|Ensure nftables loopback traffic is configured|missing 'iif lo accept'; missing 'iif != lo ip saddr 127.0.0.0/8 drop'; missing 'iif != lo ip6 saddr ::1/128 drop'; |No
+5.1.1|Access Control / Configure SSH Server|Ensure permissions on /etc/ssh/sshd_config are configured|Permissions of sshd_config 0600 and ownership of root:root|Yes
+5.1.2|Access Control / Configure SSH Server|Ensure permissions on SSH private host key files are configured.|Permissions on SSH private host key files are configured|Yes
+5.1.3|Access Control / Configure SSH Server|Ensure permissions on SSH public host key files are configured|Permissions on SSH public host key files are configured|Yes
+5.1.4|Access Control / Configure SSH Server|Ensure sshd Ciphers are configured|Weak SSH ciphers detected |No
+5.1.5|Access Control / Configure SSH Server|Ensure sshd KexAlgorithms is configured|No weak SSH KexAlgorithms detected|Yes
+5.1.6|Access Control / Configure SSH Server|Ensure sshd MACs are configured|Weak MAC algorithm(s) found: umac-128-etm@openssh.com|No
+5.1.7|Access Control / Configure SSH Server|Ensure sshd access is configured|No allow/deny users/groups configured in sshd -T output|No
+5.1.8|Access Control / Configure SSH Server|Ensure sshd Banner is configured|SSH warning banner is configured. Current status: banner /etc/issue.net|Yes
+5.1.8|Access Control / Configure SSH Server|Ensure sshd Banner is configured|Banner parameter is commented out in /etc/ssh/sshd_config|No
+5.1.9|Access Control / Configure SSH Server|Ensure sshd ClientAliveInterval and ClientAliveCountMax are configured|clientaliveinterval=180; clientalivecountmax=0; issues=ClientAliveCountMax<=0; |No
+5.1.12|Access Control / Configure SSH Server|Ensure sshd HostbasedAuthentication is disabled|hostbasedauthentication=no|Yes
+5.1.13|Access Control / Configure SSH Server|Ensure sshd IgnoreRhosts is enabled|ignorerhosts=yes|Yes
+5.1.14|Access Control / Configure SSH Server|Ensure sshd LoginGraceTime is configured|logingracetime=60|Yes
+5.1.15|Access Control / Configure SSH Server|Ensure sshd LogLevel is configured|loglevel=VERBOSE|Yes
+5.1.16|Access Control / Configure SSH Server|Ensure sshd MaxAuthTries is configured|maxauthtries=4|Yes
+5.1.17|Access Control / Configure SSH Server|Ensure sshd MaxStartups is configured|maxstartups=10:30:60|Yes
+5.1.18|Access Control / Configure SSH Server|Ensure sshd MaxSessions is configured|maxsessions=10|Yes
+5.1.19|Access Control / Configure SSH Server|Ensure sshd PermitEmptyPasswords is disabled|permitemptypasswords=no|Yes
+5.1.20|Access Control / Configure SSH Server|Ensure sshd PermitRootLogin is disabled|permitrootlogin=no|Yes
+5.1.21|Access Control / Configure SSH Server|Ensure sshd PermitUserEnvironment is disabled|permituserenvironment=no|Yes
+5.1.22|Access Control / Configure SSH Server|Ensure sshd UsePAM is enabled|usepam=yes|Yes
+5.2.1|Access Control / Configure privilege escalation|Ensure sudo is installed|sudo installed: version=1.9.17p2-3.el9_8|Yes
+5.2.2|Access Control / Configure privilege escalation|Ensure sudo commands use pty|Defaults use_pty present; no '!use_pty' negation found|Yes
+5.2.3|Access Control / Configure privilege escalation|Ensure sudo log file exists|logfile directive present: [/etc/sudoers:Defaults logfile=/var/log/sudo.log]|Yes
+5.2.5|Access Control / Configure privilege escalation|Ensure re-authentication for privilege escalation is not disabled globally|No '!authenticate' tags found (re-authentication required for sudo)|Yes
+5.2.6|Access Control / Configure privilege escalation|Ensure sudo authentication timeout is configured correctly|timestamp_timeout_values=[/etc/sudoers:5]|Yes
+5.2.7|Access Control / Configure privilege escalation|Ensure access to the su command is restricted|su command is restricted according to the configuration in /etc/pam.d/su|Yes
+5.3.1.1|Access Control / Configure PAM|Ensure latest version of pam is installed|pam version OK: pam-1.5.1-28.el9.x86_64|Yes
+5.3.1.2|Access Control / Configure PAM|Ensure latest version of authselect is installed|authselect version OK: authselect-1.2.6-3.el9.x86_64|Yes
+5.3.1.3|Access Control / Configure PAM|Ensure latest version of libpwquality is installed|libpwquality version OK: libpwquality-1.4.4-8.el9.x86_64|Yes
+5.3.2.1|Access Control / Configure PAM|Ensure active authselect profile includes pam modules|Active authselect profile includes pam modules|Yes
+5.3.2.2|Access Control / Configure PAM|Ensure pam_faillock module is enabled|password-auth=ok; system-auth=ok|Yes
+5.3.2.3|Access Control / Configure PAM|Ensure pam_pwquality module is enabled|password-auth=ok; system-auth=ok|Yes
+5.3.2.4|Access Control / Configure PAM|Ensure pam_pwhistory module is enabled|password-auth=ok; system-auth=ok|Yes
+5.3.2.5|Access Control / Configure PAM|Ensure pam_unix module is enabled|password-auth=ok; system-auth=ok|Yes
+5.3.3.1.1|Access Control / Configure PAM|Ensure password failed attempts lockout is configured|faillock.conf deny=3; pam_invalid_deny=none|Yes
+5.3.3.1.2|Access Control / Configure PAM|Ensure password unlock time is configured|unlock_time_valid=900; pam_invalid_unlock=none|Yes
+5.3.3.2.1|Access Control / Configure PAM|Ensure password number of changed characters is configured|pwquality_conf=missing_or_below_2; pam_invalid_difok=none|No
+5.3.3.2.2|Access Control / Configure PAM|Ensure password length is configured|pwquality.minlen=14; pam_invalid_minlen=none|Yes
+5.3.3.2.4|Access Control / Configure PAM|Ensure password same consecutive characters is configured|pwquality_conf=missing_or_out_of_range; pam_invalid_maxrepeat=none|No
+5.3.3.2.5|Access Control / Configure PAM|Ensure password maximum sequential characters is configured|pwquality_conf=missing_or_out_of_range; pam_invalid_maxsequence=none|No
+5.3.3.2.6|Access Control / Configure PAM|Ensure password dictionary check is enabled|pwquality=dictcheck enabled (no dictcheck=0); pam=dictcheck enabled (no dictcheck=0)|Yes
+5.3.3.2.7|Access Control / Configure PAM|Ensure password quality is enforced for the root user|enforce_for_root not found in pwquality configuration|No
+5.3.3.3.1|Access Control / Configure PAM|Ensure password history remember is configured|pwhistory_conf=missing_or_below_24; pam_invalid_remember=none|No
+5.3.3.3.2|Access Control / Configure PAM|Ensure password history is enforced for the root user|pwhistory.enforce_for_root not found in /etc/security/pwhistory.conf|No
+5.3.3.3.3|Access Control / Configure PAM|Ensure pam_pwhistory includes use_authtok|password-auth=ok; system-auth=ok|Yes
+5.3.3.4.1|Access Control / Configure PAM|Ensure pam_unix does not include nullok|pam_unix lines checked=8; nullok=absent|Yes
+5.3.3.4.2|Access Control / Configure PAM|Ensure pam_unix does not include remember|pam_unix password lines checked=2; remember=absent|Yes
+5.3.3.4.3|Access Control / Configure PAM|Ensure pam_unix includes a strong password hashing algorithm|password-auth=ok; system-auth=ok|Yes
+5.3.3.4.4|Access Control / Configure PAM|Ensure pam_unix includes use_authtok|password-auth=ok; system-auth=ok|Yes
+5.4.1.1|Access Control / User Accounts and Environment|Ensure password expiration is configured|PASS_MAX_DAYS is 365 and all users PASS_MAX_DAYS are within policy|Yes
+5.4.1.3|Access Control / User Accounts and Environment|Ensure password expiration warning days is configured|PASS_WARN_AGE is 7 days|Yes
+5.4.1.3|Access Control / User Accounts and Environment|Ensure password expiration warning days is configured|azureuser has PASS_WARN_AGE set to 7 days|Yes
+5.4.1.3|Access Control / User Accounts and Environment|Ensure password expiration warning days is configured|elasticuser has PASS_WARN_AGE set to 7 days|Yes
+5.4.1.3|Access Control / User Accounts and Environment|Ensure password expiration warning days is configured|michele.dos.santos has PASS_WARN_AGE set to 7 days|Yes
+5.4.1.3|Access Control / User Accounts and Environment|Ensure password expiration warning days is configured|adarsh.prem has PASS_WARN_AGE set to 7 days|Yes
+5.4.1.4|Access Control / User Accounts and Environment|Ensure strong password hashing algorithm is configured|ENCRYPT_METHOD=SHA512|Yes
+5.4.1.5|Access Control / User Accounts and Environment|Ensure inactive password lock is configured|Default INACTIVE is set to 30 (compliant).|Yes
+5.4.1.6|Access Control / User Accounts and Environment|Ensure all users last password change date is in the past|All users have last password change date in the past (no future-dated changes detected)|Yes
+5.4.2.1|Access Control / User Accounts and Environment|Ensure root is the only UID 0 account|UID0 users=[root]|Yes
+5.4.2.2|Access Control / User Accounts and Environment|Ensure root is the only GID 0 account|GID0 accounts=[root:0]|Yes
+5.4.2.3|Access Control / User Accounts and Environment|Ensure group root is the only GID 0 group|GID0 groups=[root:0]|Yes
+5.4.2.4|Access Control / User Accounts and Environment|Ensure root account access is controlled|root account is controlled (Password is Locked)|Yes
+5.4.2.5|Access Control / User Accounts and Environment|Ensure root path integrity|root PATH issues: "/root/.local/bin":not_a_directory; "/root/bin":not_a_directory;|No
+5.4.2.6|Access Control / User Accounts and Environment|Ensure root user umask is configured|root umask OK in /root/.bash_profile and /root/.bashrc (no non-compliant entries found)|Yes
+5.4.2.7|Access Control / User Accounts and Environment|Ensure system accounts do not have a valid login shell|System accounts with valid shells: [logstash:/bin/bash]|No
+5.4.2.8|Access Control / User Accounts and Environment|Ensure accounts without a valid login shell are locked|All non-root accounts without a valid login shell are locked|Yes
+5.4.3.2|Access Control / User Accounts and Environment|Ensure default user shell timeout is configured|Default user shell timeout is not 900 seconds or less|No
+5.4.3.3|Access Control / User Accounts and Environment|Ensure default user umask is configured|umask compliant at: /etc/profile:umask 027; no invalid umask found|Yes
+6.1.1|Logging and Auditing / Configure Integrity Checking|Ensure AIDE is installed|aide is installed: aide-0.19.2-5.el9_8.1.x86_64|Yes
+6.1.2|Logging and Auditing / Configure Integrity Checking|Ensure filesystem integrity is regularly checked|AIDE service is running daily to check filesystem integrity|Yes
+6.1.3|Logging and Auditing / Configure Integrity Checking|Ensure cryptographic mechanisms are used to protect the integrity of audit tools|All audit tool rules present with required options|Yes
+6.2.1.1|Logging and Auditing / System Logging|Ensure journald service is enabled and active|systemd-journald.service enabled=static active=active|Yes
+6.2.1.4|Logging and Auditing / System Logging|Ensure only one logging system is in use|rsyslog is in use; follow the Configure rsyslog recommendations only|Yes
+6.2.2.2|Logging and Auditing / System Logging|Ensure journald ForwardToSyslog is disabled|ForwardToSyslog=yes (expected: no)|No
+6.2.2.3|Logging and Auditing / System Logging|Ensure journald Compress is configured|Compress=yes|Yes
+6.2.2.4|Logging and Auditing / System Logging|Ensure journald Storage is configured|Storage=persistent|Yes
+6.2.2.1.1|Logging and Auditing / System Logging|Ensure systemd-journal-remote is installed|systemd-journal-remote is NOT installed|No
+6.2.2.1.3|Logging and Auditing / System Logging|Ensure systemd-journal-upload is enabled and active|systemd-journal-upload.service enabled=not-found active=inactive|No
+6.2.2.1.4|Logging and Auditing / System Logging|Ensure systemd-journal-remote service is not in use|Both systemd-journal-remote.socket and systemd-journal-remote.service are NOT enabled and NOT active|Yes
+6.2.3.1|Logging and Auditing / System Logging|Ensure rsyslog is installed|rsyslog is installed: rsyslog-8.2510.0-2.el9.x86_64|Yes
+6.2.3.2|Logging and Auditing / System Logging|Ensure rsyslog service is enabled and active|rsyslog.service enabled=enabled active=active|Yes
+6.2.3.3|Logging and Auditing / System Logging|Ensure journald is configured to send logs to rsyslog|ForwardToSyslog=yes|Yes
+6.2.3.4|Logging and Auditing / System Logging|Ensure rsyslog log file creation mode is configured|FileCreateMode compliant (0640 or more restrictive) in: /etc/rsyslog.d/99-rsyslog_filecreatemode.conf|Yes
+6.2.3.7|Logging and Auditing / System Logging|Ensure rsyslog is not configured to receive logs from a remote client|No inbound rsyslog TCP receiver directives detected|Yes
+6.2.4.1|Logging and Auditing / System Logging|Ensure access to all logfiles has been configured|Files with incorrect access: /var/log/dnf.log.4;/var/log/dnf.log;/var/log/rhsm/rhsmcertd.log;/var/log/rhsm/rhsm.log;/var/log/rhsm/rhsmcertd.log-20260927;/var/log/rhsm/rhsm.log-20260927;/var/log/rhsm/rhsmcertd.log-20261004;/var/log/rhsm/rhsm.log-20261004;/var/log/rhsm/rhsmcertd.log-20260913;/var/log/rhsm/rhsm.log-20260913;/var/log/rhsm/rhsmcertd.log-20260920;/var/log/rhsm/rhsm.log-20260920;/var/log/tuned/tuned.log;/var/log/dnf.rpm.log;/var/log/azure/Microsoft.Azure.AzureDefenderForServers.MDE.Linux/CommandExecution.log;/var/log/azure/Microsoft.Azure.AzureDefenderForServers.MDE.Linux/MdeExtensionHandlerLog.log;/var/log/azure/Microsoft.Azure.AzureDefenderForServers.MDE.Linux/MdeInstallerWrapperLog.log;/var/log/azure/Microsoft.Azure.AzureDefenderForServers.MDE.Linux/MdeInstallerLog.log;/var/log/azure/Microsoft.Azure.RecoveryServices.VMSnapshotLinux/CommandExecution.log;/var/log/azure/Microsoft.Azure.RecoveryServices.VMSnapshotLinux/shell.log;/var/log/azure/Microsoft.Azure.RecoveryServices.VMSnapshotLinux/extension.log;/var/log/azure/Microsoft.Azure.Monitor.AzureMonitorLinuxAgent/CommandExecution.log;/var/log/azure/Microsoft.Azure.Monitor.AzureMonitorLinuxAgent/extension.log;/var/log/azure/Microsoft.Azure.Monitor.AzureMonitorLinuxAgent/telegraf.log;/var/log/azure/Microsoft.Azure.Monitor.AzureMonitorLinuxAgent/extension.log-20260216.gz;/var/log/azure/Microsoft.Azure.Monitor.AzureMonitorLinuxAgent/extension.log-20260301.gz;/var/log/azure/Microsoft.Azure.Monitor.AzureMonitorLinuxAgent/extension.log-20260314.gz;/var/log/azure/Microsoft.Azure.Monitor.AzureMonitorLinuxAgent/extension.log-20260327.gz;/var/log/azure/Microsoft.Azure.Monitor.AzureMonitorLinuxAgent/extension.log-20260407.gz;/var/log/azure/Microsoft.Azure.Monitor.AzureMonitorLinuxAgent/CommandExecution.log-20260407.gz;/var/log/azure/Microsoft.Azure.Monitor.AzureMonitorLinuxAgent/extension.log-20260501.gz;/var/log/azure/Microsoft.Azure.Monitor.AzureMonitorLinuxAgent/extension.log-20260515;/var/log/azure/Microsoft.Azure.Monitor.AzureMonitorLinuxAgent/CommandExecution.log-20260501.gz;/var/log/azure/Microsoft.Azure.Monitor.AzureMonitorLinuxAgent/CommandExecution.log-20260515;/var/log/azure/Microsoft.CPlat.Core.RunCommandLinux/CommandExecution.log;/var/log/azure/run-command/handler.log;/var/log/azure/Microsoft.OSTCExtensions.VMAccessForLinux/CommandExecution.log;/var/log/azure/Microsoft.OSTCExtensions.VMAccessForLinux/extension.log;/var/log/microsoft/mdatp/install.log;/var/log/microsoft/mdatp/rotated/microsoft_defender_enterprise.log00001;/var/log/microsoft/mdatp/rotated/microsoft_defender_core_err.log00000;/var/log/microsoft/mdatp/rotated/microsoft_defender_enterprise.log;/var/log/microsoft/mdatp/rotated/microsoft_defender_core_err.log00001;/var/log/microsoft/mdatp/rotated/microsoft_defender_core.log00003;/var/log/microsoft/mdatp/rotated/microsoft_defender_enterprise.log00000;/var/log/microsoft/mdatp/rotated/microsoft_defender_core.log00001;/var/log/microsoft/mdatp/rotated/microsoft_defender_enterprise_err.log00000;/var/log/microsoft/mdatp/rotated/microsoft_defender_core.log00002;/var/log/microsoft/mdatp/rotated/microsoft_defender_enterprise_err.log00001;/var/log/microsoft/mdatp/rotated/microsoft_defender_core.log;/var/log/microsoft/mdatp/rotated/microsoft_defender_core_err.log;/var/log/microsoft/mdatp/microsoft_defender_diagnostic.log;/var/log/microsoft/mdatp/microsoft_defender_diagnostic_err.log;/var/log/microsoft/mdatp/microsoft_defender.log;/var/log/microsoft/mdatp/microsoft_defender_mplog.log;/var/log/microsoft/mdatp/microsoft_defender_err.log;/var/log/microsoft/mdatp/microsoft_defender_enterprise_imds.log;/var/log/microsoft/mdatp/uninstall.log;/var/log/microsoft/mdatp/microsoft_defender_enterprise_telemetryd.log;/var/log/microsoft/mdatp/microsoft_defender_enterprise_err.log;/var/log/microsoft/mdatp/microsoft_defender_enterprise.log;/var/log/microsoft/mdatp/microsoft_defender_core.log;/var/log/microsoft/mdatp/microsoft_defender_core_err.log;/var/log/aide/aide-migrate.log;/var/log/httpd/access_log-20251109;/var/log/httpd/error_log-20251109;/var/log/httpd/access_log-20251116;/var/log/httpd/error_log-20251116;/var/log/httpd/access_log-20251123;/var/log/httpd/error_log-20251123;/var/log/httpd/access_log-20251130;/var/log/httpd/access_log;/var/log/httpd/error_log-20251130;/var/log/httpd/error_log;/var/log/waagent.log-2026-04-07-1775561851.gz;/var/log/dnf.librepo.log.3;/var/log/dnf.log.1;/var/log/waagent.log-2026-05-01-1777642912.gz;/var/log/dnf.librepo.log.4;/var/log/hawkey.log-20261004;/var/log/dnf.log.3;/var/log/hawkey.log-20260920;/var/log/hawkey.log;/var/log/hawkey.log-20260913;/var/log/waagent.log;/var/log/waagent.log-2026-05-15-1778869198.gz;/var/log/hist/azureuser/sh_history.afs-vm-eastus-elastic-az2-logst-p02.fr.azureuser.to.azureuser;/var/log/hist/michele.dos.santos/sh_history.afs-vm-eastus-elastic-az2-logst-p02.fr.michele.dos.santos.to.michele.dos.santos;/var/log/hist/logstash/sh_history.afs-vm-eastus-elastic-az2-logst-p02.fr.azureuser.to.logstash;/var/log/logstash_original/logstash-json.log;/var/log/logstash_original/logstash-slowlog-plain.log;/var/log/logstash_original/logstash-deprecation.log;/var/log/logstash_original/logstash-slowlog-json.log;/var/log/logstash_original/logstash-plain-2026-08-19-1.log.gz;/var/log/logstash_original/logstash-plain.log;/var/log/logstash_original/logstash-plain-2026-08-20-1.log.gz;/var/log/dnf.librepo.log.2;/var/log/dnf.librepo.log.1;/var/log/dnf.librepo.log;/var/log/hawkey.log-20260927;/var/log/dnf.log.2;|No
+7.1.1|System Maintenance / System File Permissions|Ensure permissions on /etc/passwd are configured|Permissions on /etc/passwd are configured /etc/passwd 644 0/root 0/root|Yes
+7.1.2|System Maintenance / System File Permissions|Ensure permissions on /etc/passwd- are configured|Permissions on /etc/passwd- are configured /etc/passwd- 644 0/root 0/root|Yes
+7.1.3|System Maintenance / System File Permissions|Ensure permissions on /etc/group are configured|Permissions on /etc/group are configured /etc/group 644 0/root 0/root|Yes
+7.1.4|System Maintenance / System File Permissions|Ensure permissions on /etc/group- are configured|Permissions on /etc/group- are configured /etc/group- 644 0/root 0/root|Yes
+7.1.5|System Maintenance / System File Permissions|Ensure permissions on /etc/shadow are configured|Permissions on /etc/shadow are configured /etc/shadow 0 0/root 0/root|Yes
+7.1.6|System Maintenance / System File Permissions|Ensure permissions on /etc/shadow- are configured|Permissions on /etc/shadow- are configured /etc/shadow- 0 0/root 0/root|Yes
+7.1.7|System Maintenance / System File Permissions|Ensure permissions on /etc/gshadow are configured|Permissions on /etc/gshadow are configured /etc/gshadow 0 0/root 0/root|Yes
+7.1.8|System Maintenance / System File Permissions|Ensure permissions on /etc/gshadow- are configured|Permissions on /etc/gshadow- are configured /etc/gshadow- 0 0/root 0/root|Yes
+7.1.9|System Maintenance / System File Permissions|Ensure permissions on /etc/shells are configured| /etc/shells mode is 0644 (compliant). Owner is root (compliant). Group is root (compliant)|Yes
+7.1.10|System Maintenance / System File Permissions|Ensure permissions on /etc/security/opasswd are configured|Permissions on /etc/security/opasswd are configured /etc/security/opasswd Access: (0600/-rw-------) Uid: (0/root) Gid: (0/root)|Yes
+7.1.10|System Maintenance / System File Permissions|Ensure permissions on /etc/security/opasswd are configured|Permissions on /etc/security/opasswd.old are configured /etc/security/opasswd.old Access: (0600/-rw-------) Uid: (0/root) Gid: (0/root)|Yes
+7.1.11|System Maintenance / System File Permissions|Ensure world writable files and directories are secured|No world-writable files or directories without sticky bit|Yes
+7.1.12|System Maintenance / System File Permissions|Ensure no files or directories without an owner and a group exist|All files and directories have valid owner and group|Yes
+7.2.1|System Maintenance / Local User and Group Settings|Ensure accounts in /etc/passwd use shadowed passwords|All accounts are set to use shadowed passwords|Yes
+7.2.2|System Maintenance / Local User and Group Settings|Ensure /etc/shadow password fields are not empty|All shadow password fields are set|Yes
+7.2.3|System Maintenance / Local User and Group Settings|Ensure all groups in /etc/passwd exist in /etc/group|No Group found|Yes
+7.2.4|System Maintenance / Local User and Group Settings|Ensure no duplicate UIDs exist|No duplicate UIDs found|Yes
+7.2.5|System Maintenance / Local User and Group Settings|Ensure no duplicate GIDs exist|No duplicate GIDs found|Yes
+7.2.6|System Maintenance / Local User and Group Settings|Ensure no duplicate user names exist|No duplicate User Names found|Yes
+7.2.7|System Maintenance / Local User and Group Settings|Ensure no duplicate Group Names exist|No duplicate Group Names found|Yes
+7.2.8|System Maintenance / Local User and Group Settings|Ensure local interactive user home directories are configured|Violations found for User "logstash" ownership incorrect (owned by root)|No
+7.2.8|System Maintenance / Local User and Group Settings|Ensure local interactive user home directories are configured|Violations found for User "logstash" permission "755" should be 750 or stricter|No
+7.2.9|System Maintenance / Local User and Group Settings|Ensure local interactive user dot files access is configured|All local interactive users: no forbidden dotfiles; dotfiles owned by user and primary group; permissions OK|Yes
